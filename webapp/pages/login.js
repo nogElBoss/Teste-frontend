@@ -10,10 +10,7 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [nome, setNome] = useState("");
-  const [nif, setNIF] = useState("");
-  const [telemovel, setTelemovel] = useState("");
-  const [morada, setMorada] = useState("");
-  const [dataNascimento, setDataNascimento] = useState("");
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -75,43 +72,7 @@ export default function Login() {
                   value={nome}
                   onChange={(e) => setNome(e.target.value)}
                 />
-              </FormControl>
-              <FormControl id="nif" mb="4">
-                <FormLabel>NIF</FormLabel>
-                <Input
-                  type="nif"
-                  placeholder="nif"
-                  value={nif}
-                  onChange={(e) => setNIF(e.target.value)}
-                />
-              </FormControl>
-              <FormControl id="dataNascimento" mb="4">
-                <FormLabel>Data de Nascimento</FormLabel>
-                <Input
-                  type="dataNascimento"
-                  placeholder="dataNasciemnto"
-                  value={dataNascimento}
-                  onChange={(e) => setDataNascimento(e.target.value)}
-                />
-              </FormControl>
-              <FormControl id="morada" mb="4">
-                <FormLabel>Morada</FormLabel>
-                <Input
-                  type="morada"
-                  placeholder="morada"
-                  value={morada}
-                  onChange={(e) => setMorada(e.target.value)}
-                />
-              </FormControl>
-              <FormControl id="telemovel" mb="4">
-                <FormLabel>Telemovel</FormLabel>
-                <Input
-                  type="telemovel"
-                  placeholder="telemovel"
-                  value={telemovel}
-                  onChange={(e) => setTelemovel(e.target.value)}
-                />
-              </FormControl>
+                </FormControl>
               <Button type="submit" width="full">
                 Entrar
               </Button>

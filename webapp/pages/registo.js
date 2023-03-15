@@ -20,10 +20,14 @@ export default function Registo() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmePassword, setConfirmePassword] = useState("");
+  const [nif, setNIF] = useState("");
+  const [telemovel, setTelemovel] = useState("");
+  const [morada, setMorada] = useState("");
+  const [dataNascimento, setDataNascimento] = useState("");
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log(`Nome: ${nome}, Email: ${email}, Password: ${password}`);
+    console.log(`Nome: ${nome}, Email: ${email}, Password: ${password}, NIF: ${nif}, Telemovel: ${telemovel}, Morada: ${morada}, DataNascimento: ${password}`);
   };
 
   return (
@@ -42,12 +46,14 @@ export default function Registo() {
       <Box
         background="rgb(1,1,1,0.6)"
         width="100%"
-        height="100%"
+        height="150vh"
         zIndex="100"
+        
+        
       >
       <Navbar />
       <Box h="100vh" d="flex" alignItems="center" justifyContent="center">
-        <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+        <Box marginTop="260px" maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
           <Box bg="#65000b" p="4">
             <Heading size="md" color="white">
               Registe-se na sua conta
@@ -89,6 +95,42 @@ export default function Registo() {
                   placeholder="Confirme sua senha"
                   value={confirmePassword}
                   onChange={(e) => setConfirmePassword(e.target.value)}
+                />
+              </FormControl>
+              <FormControl id="nif" mb="4">
+                <FormLabel>NIF</FormLabel>
+                <Input
+                  type="nif"
+                  placeholder="nif"
+                  value={nif}
+                  onChange={(e) => setNIF(e.target.value)}
+                />
+              </FormControl>
+              <FormControl id="dataNascimento" mb="4">
+                <FormLabel>Data de Nascimento</FormLabel>
+                <Input
+                  type="dataNascimento"
+                  placeholder="dataNasciemnto"
+                  value={dataNascimento}
+                  onChange={(e) => setDataNascimento(e.target.value)}
+                />
+              </FormControl>
+              <FormControl id="morada" mb="4">
+                <FormLabel>Morada</FormLabel>
+                <Input
+                  type="morada"
+                  placeholder="morada"
+                  value={morada}
+                  onChange={(e) => setMorada(e.target.value)}
+                />
+              </FormControl>
+              <FormControl id="telemovel" mb="4">
+                <FormLabel>Telemovel</FormLabel>
+                <Input
+                  type="telemovel"
+                  placeholder="telemovel"
+                  value={telemovel}
+                  onChange={(e) => setTelemovel(e.target.value)}
                 />
               </FormControl>
               <Button type="submit" width="full">
