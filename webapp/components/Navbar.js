@@ -28,7 +28,7 @@ const Navbar = () => {
           <Link href="/about" mr={4} fontSize="md" fontWeight="bold" letterSpacing="wide">
             Sobre nós
           </Link>
-          <Link href="/contact" mr={4} fontSize="md" fontWeight="bold" letterSpacing="wide">
+          <Link href="/contactos" mr={4} fontSize="md" fontWeight="bold" letterSpacing="wide">
             Contatos
           </Link>
           <Link href="/produto" mr={4} fontSize="md" fontWeight="bold" letterSpacing="wide">
@@ -43,6 +43,11 @@ const Navbar = () => {
         <NextLink href="/admin" passHref>
           <Link display="flex" alignItems="center">
             <img src="/perfil.png" alt="Descrição da imagem" width="50px" mr={4} />
+          </Link>
+        </NextLink>
+        <NextLink href="/cesto" passHref>
+          <Link display="flex" alignItems="center">
+            <img src="/cesto.png" alt="Descrição da imagem" width="35px" mr={4} />
           </Link>
         </NextLink>
       <Box display={{ base: "none", md: "block" }}>
