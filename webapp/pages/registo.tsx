@@ -2,7 +2,7 @@ import { Box, Button, FormControl, FormLabel, Heading, Input, Link, Text } from 
 import { ThemeProvider } from "@chakra-ui/react";
 import { Global, css } from "@emotion/react";
 import theme from "../styles/styles";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import Navbar from "../components/Navbar_sign"; // importe o componente Navbar
 
 
@@ -12,7 +12,7 @@ export default function Login() {
   const [nome, setNome] = useState("");
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event:FormEvent) => {
     event.preventDefault();
     console.log(`Email: ${email}, Password: ${password}`);
   };
@@ -37,11 +37,11 @@ export default function Login() {
         zIndex="100"
         >
       <Navbar />
-      <Box h="100vh" d="flex" alignItems="center" justifyContent="center">
+      <Box h="100vh" display="flex" alignItems="center" justifyContent="center">
         <Box maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
           <Box bg="#65000b" p="4">
             <Heading size="md" color="white">
-              Faça o login na sua conta
+              Faça o seu registo
             </Heading>
           </Box>
           <Box p="4">
