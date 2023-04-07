@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Link, Text, Flex } from "@chakra-ui/react";
+import { Box, Button, Heading, Link, Text, Flex, Image } from "@chakra-ui/react";
 import { ThemeProvider } from "@chakra-ui/react";
 import theme from "../styles/styles";
 import NextLink from "next/link";
@@ -16,7 +16,7 @@ const Navbar = () => {
     >
       <Flex align="center">
         <Link href="/">
-          <img src="/logo_p.jpg" alt="Logo" width="90px" />
+          <Image src="/logo_p.jpg" alt="Logo" width="90px" />
         </Link>
       </Flex>
 
@@ -40,18 +40,16 @@ const Navbar = () => {
         </Box>
       </Flex>
 
-        <NextLink href="/admin" passHref>
-          <Link display="flex" alignItems="center">
-            <img src="/perfil.png" alt="Descrição da imagem" width="50px" mr={4} />
+          <Link display="flex" alignItems="center" href="/admin">
+            <Image src="/perfil.png" alt="Descrição da imagem" width="50px" mr={4} />
           </Link>
-        </NextLink>
-        <NextLink href="/cesto" passHref>
-          <Link display="flex" alignItems="center">
-            <img src="/cesto.png" alt="Descrição da imagem" width="35px" mr={4} />
+
+          <Link display="flex" alignItems="center" href="/cesto">
+            <Image src="/cesto.png" alt="Descrição da imagem" width="35px" mr={4} />
           </Link>
-        </NextLink>
+
       <Box display={{ base: "none", md: "block" }}>
-        <NextLink href="/login" passHref>
+        <Link href="/login">
           <Button
             colorScheme="#65000b"
             variant="outline"
@@ -61,7 +59,7 @@ const Navbar = () => {
           >
             Logout
           </Button>
-        </NextLink> 
+        </Link> 
       </Box>
         
 

@@ -1,8 +1,8 @@
-import { ChakraProvider, CSSReset } from "@chakra-ui/react";
-import customTheme from "../styles/theme";
+import { ChakraProvider, CSSReset } from "@chakra-ui/react"
+import customTheme from "../styles/theme"
 
-import "../styles/globals.css";
-import { AppProps } from "next/app";
+import "../styles/globals.css"
+import { AppProps } from "next/app"
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -10,8 +10,8 @@ function MyApp({ Component, pageProps }: AppProps) {
       <CSSReset />
       <Component {...pageProps} />
     </ChakraProvider>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp
 

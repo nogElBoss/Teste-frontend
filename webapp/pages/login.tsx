@@ -52,7 +52,7 @@ export default function Registo() {
         
       >
       <Navbar />
-      <Box h="100vh" d="flex" alignItems="center" justifyContent="center">
+      <Box h="100vh" alignItems="center" justifyContent="center">
         <Box marginTop="260px" maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
           <Box bg="#65000b" p="4">
             <Heading size="md" color="white">

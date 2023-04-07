@@ -1,4 +1,4 @@
-import { Box, Button, Heading, Link, Text, Flex } from "@chakra-ui/react";
+import { Box, Button, Heading, Link, Text, Flex, Image } from "@chakra-ui/react";
 import { ThemeProvider } from "@chakra-ui/react";
 import theme from "../styles/styles";
 import NextLink from "next/link";
@@ -16,7 +16,7 @@ const Navbar = () => {
     >
       <Flex align="center">
         <Link href="/">
-          <img src="/logo_p.jpg" alt="Logo" width="90px" />
+          <Image src="/logo_p.jpg" alt="Logo" width="90px" />
         </Link>
       </Flex>
 
